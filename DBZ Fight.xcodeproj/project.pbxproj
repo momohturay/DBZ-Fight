@@ -291,7 +291,6 @@
 		664C49B2239ABC3500858CAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB72Z5Z35W;
 				INFOPLIST_FILE = "DBZ Fight/Info.plist";
@@ -309,7 +308,6 @@
 		664C49B3239ABC3500858CAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB72Z5Z35W;
 				INFOPLIST_FILE = "DBZ Fight/Info.plist";
