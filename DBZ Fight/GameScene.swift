@@ -14,13 +14,10 @@ var player = SKSpriteNode()
 var aiFighter = SKSpriteNode()
 
 class GameScene: SKScene {
-    
-
-
         override func didMove(to view: SKView)
          {
+             snow()
              spawnSprite()
-            
              ObserveForGameControllers()
             
              let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
