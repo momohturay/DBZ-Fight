@@ -16,7 +16,7 @@ var aiFighter = SKSpriteNode()
 class GameScene: SKScene {
         override func didMove(to view: SKView)
          {
-             snow()
+             rain() 
              spawnSprite()
              ObserveForGameControllers()
             
@@ -73,7 +73,7 @@ class GameScene: SKScene {
     {
     (gamepad: GCExtendedGamepad, element: GCControllerElement) in
     // Add movement in here for sprites of the controllers
-     self.controllerInputDetected(gamepad: gamepad, element: element, index: controller.playerIndex.rawValue)
+        self.controllerInputDetected(gamepad: gamepad, element: element as! GCControllerButtonInput, index: controller.playerIndex.rawValue)
         }
     }
     

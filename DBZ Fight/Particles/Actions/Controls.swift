@@ -13,13 +13,25 @@ import SpriteKit
 extension GameScene
 
 {
-    func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerElement, index: Int)
+    func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerButtonInput, index: Int)
     {
-        if gamepad.buttonA.isPressed
+//        if gamepad.buttonA.value == 1.0
+        if (gamepad.buttonA.isPressed)
                {
                    print("A is pressed")
                }
-               
+        if gamepad.buttonB.value == 1.0
+                {
+                    print("B is pressed")
+                }
+        if (gamepad.buttonX.isPressed)
+        {
+            print("X is pressed")
+        }
+        if (gamepad.buttonY.isPressed)
+        {
+            print("Y is pressed")
+        }
 //    if (gamepad.leftThumbstick == element)
 //    {
 //    if (gamepad.leftThumbstick.xAxis.value != 0)
