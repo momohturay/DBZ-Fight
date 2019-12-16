@@ -18,11 +18,11 @@ extension GameScene
 //        if gamepad.buttonA.value == 1.0
         if (gamepad.buttonA.isPressed)
                {
-                   print("A is pressed")
+            print("A is pressed")
                }
-        if gamepad.buttonB.value == 1.0
+        if gamepad.buttonB.isPressed
                 {
-                    print("B is pressed")
+            print("B is pressed")
                 }
         if (gamepad.buttonX.isPressed)
         {
@@ -31,6 +31,62 @@ extension GameScene
         if (gamepad.buttonY.isPressed)
         {
             print("Y is pressed")
+        }
+        if (gamepad.leftThumbstick.xAxis.value == 1)
+        {
+            print("left thumb left")
+        }
+        if (gamepad.leftThumbstick.xAxis.value == -1)
+        {
+            print("left thumb right")
+        }
+        if (gamepad.leftThumbstick.yAxis.value == 1)
+        {
+            print("left thumb up")
+        }
+        if (gamepad.leftThumbstick.yAxis.value == -1)
+        {
+            print("left thumb down")
+        }
+        if (gamepad.rightThumbstick.xAxis.value == 1)
+             {
+            print("Right thumb left")
+             }
+        if (gamepad.rightThumbstick.xAxis.value == -1)
+             {
+            print("right thumb right")
+             }
+        if (gamepad.rightThumbstick.yAxis.value == 1)
+             {
+            print("right thumb up")
+             }
+        if (gamepad.rightThumbstick.yAxis.value == -1)
+             {
+            print("right thumb down")
+             }
+        if (gamepad.dpad.left.isPressed)
+        {
+            print("dpad left")
+        }
+        if (gamepad.dpad.right.isPressed)
+        {
+            print("dpad right")
+        }
+        if (gamepad.dpad.up.isPressed)
+        {
+            print("dpad up")
+        }
+        if (gamepad.dpad.down.isPressed)
+        {
+            print("dpad down")
+        }
+        if (gamepad.leftShoulder.isPressed)
+        {
+            print("left shoulder pad is pressed")
+        }
+        if (gamepad.rightShoulder.isPressed)
+        {
+            print("right shoulder pad is pressed")
         }
 //    if (gamepad.leftThumbstick == element)
 //    {
@@ -97,3 +153,4 @@ extension GameScene
     
 }
 }
+
