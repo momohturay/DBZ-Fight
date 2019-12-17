@@ -64,22 +64,6 @@ extension GameScene
              {
             print("right thumb down")
              }
-        if (gamepad.rightThumbstick.xAxis.value) == 0
-            {
-            print("we not touching nun (x)")
-            }
-        if (gamepad.rightThumbstick.yAxis.value) == 0
-            {
-            print("we not touching nun (x)")
-            }
-        if (gamepad.leftThumbstick.xAxis.value) == 0
-            {
-            print("we not touching nun (x)")
-            }
-        if (gamepad.leftThumbstick.yAxis.value) == 0
-            {
-            print("we not touching nun (y)")
-            }
         if (gamepad.dpad.left.value) == 1 
             {
             print("dpad left")
@@ -96,14 +80,7 @@ extension GameScene
             {
             print("dpad down")
             }
-        if (gamepad.leftShoulder.isPressed)
-            {
-            print("left shoulder pad is pressed")
-            }
-        if (gamepad.rightShoulder.isPressed)
-            {
-            print("right shoulder pad is pressed")
-            }
+     
 //    if (gamepad.leftThumbstick == element)
 //    {
 //    if (gamepad.leftThumbstick.xAxis.value != 0)

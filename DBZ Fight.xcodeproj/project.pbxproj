@@ -67,7 +67,6 @@
 				2B42ED9423A3F7B800139967 /* rainParticle.sks */,
 				2B55FE4823A93A6E00553782 /* smokeParticle.sks */,
 				2B42ED9523A3F7B800139967 /* Assets.xcassets */,
-				2B42ED9A23A3FC5000139967 /* Actions */,
 			);
 			path = Particles;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 				664C49A0239ABC3300858CAB /* Actions.sks */,
 				664C49A2239ABC3300858CAB /* GameScene.swift */,
 				664C49A4239ABC3300858CAB /* GameViewController.swift */,
+				2B42ED9A23A3FC5000139967 /* Actions */,
 				2B42ED9123A3F76F00139967 /* Particles */,
 				2B6CC5CB23A6BC5400BB99D3 /* Sprites */,
 				664C49A6239ABC3300858CAB /* Main.storyboard */,
