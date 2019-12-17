@@ -16,7 +16,7 @@ var aiFighter = SKSpriteNode()
 class GameScene: SKScene {
         override func didMove(to view: SKView)
          {
-             rain() 
+//             rain() 
              spawnSprite()
              ObserveForGameControllers()
             

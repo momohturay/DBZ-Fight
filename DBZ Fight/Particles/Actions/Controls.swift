@@ -20,34 +20,34 @@ extension GameScene
                {
             print("A is pressed")
                }
-        if gamepad.buttonB.isPressed
+        if (gamepad.buttonB.isPressed)
                 {
             print("B is pressed")
                 }
         if (gamepad.buttonX.isPressed)
-        {
+            {
             print("X is pressed")
-        }
+            }
         if (gamepad.buttonY.isPressed)
-        {
+            {
             print("Y is pressed")
-        }
+            }
         if (gamepad.leftThumbstick.xAxis.value == 1)
-        {
+            {
             print("left thumb left")
-        }
+            }
         if (gamepad.leftThumbstick.xAxis.value == -1)
-        {
+            {
             print("left thumb right")
-        }
+            }
         if (gamepad.leftThumbstick.yAxis.value == 1)
-        {
+            {
             print("left thumb up")
-        }
+            }
         if (gamepad.leftThumbstick.yAxis.value == -1)
-        {
+            {
             print("left thumb down")
-        }
+            }
         if (gamepad.rightThumbstick.xAxis.value) == 1
              {
             print("Right thumb left")
@@ -65,46 +65,45 @@ extension GameScene
             print("right thumb down")
              }
         if (gamepad.rightThumbstick.xAxis.value) == 0
-        {
+            {
             print("we not touching nun (x)")
-        }
+            }
         if (gamepad.rightThumbstick.yAxis.value) == 0
-        {
+            {
             print("we not touching nun (x)")
-        }
+            }
         if (gamepad.leftThumbstick.xAxis.value) == 0
-        {
+            {
             print("we not touching nun (x)")
-        }
+            }
         if (gamepad.leftThumbstick.yAxis.value) == 0
-        {
+            {
             print("we not touching nun (y)")
-        }
-
-        if (gamepad.dpad.left.value) == 1
-        {
+            }
+        if (gamepad.dpad.left.value) == 1 
+            {
             print("dpad left")
-        }
+            }
         if (gamepad.dpad.xAxis.value) == 1
-        {
+            {
             print("dpad right")
-        }
+            }
         if (gamepad.dpad.up.isPressed)
-        {
+            {
             print("dpad up")
-        }
+            }
         if (gamepad.dpad.down.isPressed)
-        {
+            {
             print("dpad down")
-        }
+            }
         if (gamepad.leftShoulder.isPressed)
-        {
+            {
             print("left shoulder pad is pressed")
-        }
+            }
         if (gamepad.rightShoulder.isPressed)
-        {
+            {
             print("right shoulder pad is pressed")
-        }
+            }
 //    if (gamepad.leftThumbstick == element)
 //    {
 //    if (gamepad.leftThumbstick.xAxis.value != 0)
