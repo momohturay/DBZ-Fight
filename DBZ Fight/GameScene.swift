@@ -68,13 +68,19 @@ class GameScene: SKScene {
     
     func setupControllerControls(controller: GCController)
     {
-    // Checks the controller when anything is moved or pressed on it
-    controller.extendedGamepad?.valueChangedHandler =
-    {
-    (gamepad: GCExtendedGamepad, element: GCControllerElement) in
-    // Add movement in here for sprites of the controllers
-        self.controllerInputDetected(gamepad: gamepad, element: element as! GCControllerButtonInput, index: controller.playerIndex.rawValue)
-        }
+//        // Checks the controller when anything is moved or pressed on it
+//        controller.extendedGamepad?.valueChangedHandler = {
+//            (gamepad, element) in
+//            self.controllerInputDetected(gamepad: <#T##GCExtendedGamepad#>, element: <#T##GCControllerAxisInput#>, index: <#T##Int#>)
+//            self.controllerInputDetected(gamepad: gamepad, element: element, index: 2)
+//            self.controllerInputDetected(gamepad: gamepad, element: element, index: controller.playerIndex.rawValue )
+//        }
+//        controller.extendedGamepad?.valueChangedHandler =
+//        {
+//        (gamepad: GCExtendedGamepad, element: GCControllerElement) in
+//        // Add movement in here for sprites of the controllers
+//        self.controllerInputDetected(gamepad: gamepad, element: element as! GCControllerButtonInput && GCControllerAxisInput, index: controller.playerIndex.rawValue)
+//        }
     }
     
     
