@@ -20,6 +20,9 @@ class GameScene: SKScene {
              spawnSprite()
              ObserveForGameControllers()
             
+            var Computer = Player(health: 100, Armor: 100)
+            Computer.health-=10
+            
              let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
              borderBody.friction = 0.0
              self.physicsBody = borderBody
