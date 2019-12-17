@@ -32,54 +32,31 @@ extension GameScene
             {
             print("Y is pressed")
             }
-        if (gamepad.leftThumbstick.xAxis.value == 1)
-            {
-            print("left thumb left")
             }
-        if (gamepad.leftThumbstick.xAxis.value == -1)
-            {
-            print("left thumb right")
-            }
-        if (gamepad.leftThumbstick.yAxis.value == 1)
-            {
-            print("left thumb up")
-            }
-        if (gamepad.leftThumbstick.yAxis.value == -1)
-            {
-            print("left thumb down")
-            }
-        if (gamepad.rightThumbstick.xAxis.value) == 1
-             {
-            print("Right thumb left")
-             }
-        if (gamepad.rightThumbstick.xAxis.value) == -1
-             {
-            print("right thumb right")
-             }
+    func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerAxisInput, index: Int)
+    {
+        if (gamepad.LeftThumbstickXAxis.value) == 1
+        {
+            print("Left")
+        }
+        if (gamepad.LeftThumbstickXAxis.value) == -1
+               {
+                   print("Right")
+               }
+        if (gamepad.rightThumbstickXAxis.value) == 1
+               {
+                   print("Left")
+               }
+        if (gamepad.rightThumbstickXAxis.value) == -1
+               {
+                   print("Right")
+               }
         if (gamepad.rightThumbstick.yAxis.value) == 1
-             {
-            print("right thumb up")
-             }
-        if (gamepad.rightThumbstick.yAxis.value) == -1
-             {
-            print("right thumb down")
-             }
-        if (gamepad.dpad.left.value) == 1 
-            {
-            print("dpad left")
-            }
-        if (gamepad.dpad.xAxis.value) == 1
-            {
-            print("dpad right")
-            }
-        if (gamepad.dpad.up.isPressed)
-            {
-            print("dpad up")
-            }
-        if (gamepad.dpad.down.isPressed)
-            {
-            print("dpad down")
-            }
+        {
+             print("Left")
+        }
+        
+    }
      
 //    if (gamepad.leftThumbstick == element)
 //    {
