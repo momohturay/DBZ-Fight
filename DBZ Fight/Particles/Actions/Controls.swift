@@ -48,27 +48,44 @@ extension GameScene
         {
             print("left thumb down")
         }
-        if (gamepad.rightThumbstick.xAxis.value == 1)
+        if (gamepad.rightThumbstick.xAxis.value) == 1
              {
             print("Right thumb left")
              }
-        if (gamepad.rightThumbstick.xAxis.value == -1)
+        if (gamepad.rightThumbstick.xAxis.value) == -1
              {
             print("right thumb right")
              }
-        if (gamepad.rightThumbstick.yAxis.value == 1)
+        if (gamepad.rightThumbstick.yAxis.value) == 1
              {
             print("right thumb up")
              }
-        if (gamepad.rightThumbstick.yAxis.value == -1)
+        if (gamepad.rightThumbstick.yAxis.value) == -1
              {
             print("right thumb down")
              }
-        if (gamepad.dpad.left.isPressed)
+        if (gamepad.rightThumbstick.xAxis.value) == 0
+        {
+            print("we not touching nun (x)")
+        }
+        if (gamepad.rightThumbstick.yAxis.value) == 0
+        {
+            print("we not touching nun (x)")
+        }
+        if (gamepad.leftThumbstick.xAxis.value) == 0
+        {
+            print("we not touching nun (x)")
+        }
+        if (gamepad.leftThumbstick.yAxis.value) == 0
+        {
+            print("we not touching nun (y)")
+        }
+
+        if (gamepad.dpad.left.value) == 1
         {
             print("dpad left")
         }
-        if (gamepad.dpad.right.isPressed)
+        if (gamepad.dpad.xAxis.value) == 1
         {
             print("dpad right")
         }
