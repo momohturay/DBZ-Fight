@@ -35,19 +35,19 @@ extension GameScene
             }
     func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerAxisInput, index: Int)
     {
-        if (gamepad.LeftThumbstickXAxis.value) == 1
+        if (gamepad.leftThumbstick.xAxis.value) == 1
         {
             print("Left")
         }
-        if (gamepad.LeftThumbstickXAxis.value) == -1
+        if (gamepad.leftThumbstick.xAxis.value) == -1
                {
                    print("Right")
                }
-        if (gamepad.rightThumbstickXAxis.value) == 1
+        if (gamepad.rightThumbstick.xAxis.value) == 1
                {
                    print("Left")
                }
-        if (gamepad.rightThumbstickXAxis.value) == -1
+        if (gamepad.rightThumbstick.xAxis.value) == -1
                {
                    print("Right")
                }
