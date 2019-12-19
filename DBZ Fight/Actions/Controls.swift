@@ -33,7 +33,7 @@ extension GameScene
             print("Y is pressed")
             }
             }
-    func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerAxisInput, index: Int)
+    func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerDirectionPad, index: Int)
     {
         if (gamepad.leftThumbstick.xAxis.value) == 1
         {

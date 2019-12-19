@@ -68,24 +68,17 @@ class GameScene: SKScene {
     // Pauses the Game if a controller is disconnected
     self.isPaused = true
     }
-    
-    func setupControllerControls(controller: GCController)
-    {
-//        // Checks the controller when anything is moved or pressed on it
-//        controller.extendedGamepad?.valueChangedHandler = {
-//            (gamepad, element) in
-//            self.controllerInputDetected(gamepad: <#T##GCExtendedGamepad#>, element: <#T##GCControllerAxisInput#>, index: <#T##Int#>)
-//            self.controllerInputDetected(gamepad: gamepad, element: element, index: 2)
-//            self.controllerInputDetected(gamepad: gamepad, element: element, index: controller.playerIndex.rawValue )
-//        }
-//        controller.extendedGamepad?.valueChangedHandler =
-//        {
-//        (gamepad: GCExtendedGamepad, element: GCControllerElement) in
-//        // Add movement in here for sprites of the controllers
-//        self.controllerInputDetected(gamepad: gamepad, element: element as! GCControllerButtonInput && GCControllerAxisInput, index: controller.playerIndex.rawValue)
-//        }
+   
     }
-    
+   func setupControllerControls(controller: GCController) {
+       //Function that check the controller when anything is moved or pressed on it
+       controller.extendedGamepad?.valueChangedHandler = {
+         (gamepad: GCExtendedGamepad, element: GCControllerElement) in
+         // Add movement in here for sprites of the controllers
+      self.controllerInputDetected(gamepad: gamepad, element: element, index: controller.playerIndex.rawValue)
+       }
+     }
+   
     
     func spawnSprite ()
         //spawns Sprite
@@ -96,21 +89,21 @@ class GameScene: SKScene {
     }
     
     
-    
-    func creataipaddle ()
-     {
-        //create the paddle at tope of the screen
-        aiFighter = SKSpriteNode (color: UIColor.green, size: CGSize(width: 200, height: 50))
-        aiFighter.position = CGPoint(x: frame.width  * 0.5, y: frame.height  * 0.8)
-        addChild(aiFighter)
-        aiFighter.name = "aiFighter"
-        //add physics to the paddle
-        aiFighter.physicsBody = SKPhysicsBody(rectangleOf: aiFighter.frame.size)
-        aiFighter.physicsBody?.allowsRotation = false
-        aiFighter.physicsBody?.friction = 0
-        aiFighter.physicsBody?.affectedByGravity = false
-        aiFighter
-            .physicsBody?.isDynamic = false
-        
-    }
-}
+//
+//    func creataipaddle ()
+//     {
+//        //create the paddle at tope of the screen
+//        aiFighter = SKSpriteNode (color: UIColor.green, size: CGSize(width: 200, height: 50))
+//        aiFighter.position = CGPoint(x: frame.width  * 0.5, y: frame.height  * 0.8)
+//        addChild(aiFighter)
+//        aiFighter.name = "aiFighter"
+//        //add physics to the paddle
+//        aiFighter.physicsBody = SKPhysicsBody(rectangleOf: aiFighter.frame.size)
+//        aiFighter.physicsBody?.allowsRotation = false
+//        aiFighter.physicsBody?.friction = 0
+//        aiFighter.physicsBody?.affectedByGravity = false
+//        aiFighter
+//            .physicsBody?.isDynamic = false
+//
+//    }
+
