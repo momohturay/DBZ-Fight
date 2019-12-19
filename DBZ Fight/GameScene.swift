@@ -46,7 +46,9 @@ class GameScene: SKScene {
     
     @objc func connectControllers()
         // This Function is called when a controller is connected to the Apple TV
-        {
+    {
+        
+        print("found controller")
     //Unpauses the Game if it is currently paused
     self.isPaused = false
     //Used to register the Nimbus Controllers to a specific Player Number
@@ -54,10 +56,12 @@ class GameScene: SKScene {
     // Run through each controller currently connected to the system
     for controller in GCController.controllers() {
     //Check to see whether it is an extended Game Controller (Such as a Nimbus)
-    if controller.extendedGamepad != nil {
-    controller.playerIndex = GCControllerPlayerIndex.init(rawValue: indexNumber)!
-    indexNumber += 1
-    setupControllerControls(controller: controller)
+        if controller.extendedGamepad != nil {
+            
+            print(2)
+        controller.playerIndex = GCControllerPlayerIndex.init(rawValue: indexNumber)!
+        indexNumber += 1
+        setupControllerControls(controller: controller)
             }
         }
     }
@@ -69,13 +73,18 @@ class GameScene: SKScene {
     self.isPaused = true
     }
    
-    }
+    
    func setupControllerControls(controller: GCController) {
        //Function that check the controller when anything is moved or pressed on it
+    print(3)
        controller.extendedGamepad?.valueChangedHandler = {
          (gamepad: GCExtendedGamepad, element: GCControllerElement) in
          // Add movement in here for sprites of the controllers
-      self.controllerInputDetected(gamepad: gamepad, element: element, index: controller.playerIndex.rawValue)
+        print(4)
+        self.controllerInputDetected(gamepad: gamepad, element: element, index: controller.playerIndex.rawValue)
+//        self.controllerInputDetected(gamepad: gamepad, element: GCControllerButtonInput, index: controller.playerIndex.rawValue)
+        
+//      self.controllerInputDetected(gamepad: gamepad, index: controller.playerIndex.rawValue)
        }
      }
    
@@ -87,23 +96,7 @@ class GameScene: SKScene {
         
         player.position = CGPoint(x: 1, y: 2)
     }
-    
-    
-//
-//    func creataipaddle ()
-//     {
-//        //create the paddle at tope of the screen
-//        aiFighter = SKSpriteNode (color: UIColor.green, size: CGSize(width: 200, height: 50))
-//        aiFighter.position = CGPoint(x: frame.width  * 0.5, y: frame.height  * 0.8)
-//        addChild(aiFighter)
-//        aiFighter.name = "aiFighter"
-//        //add physics to the paddle
-//        aiFighter.physicsBody = SKPhysicsBody(rectangleOf: aiFighter.frame.size)
-//        aiFighter.physicsBody?.allowsRotation = false
-//        aiFighter.physicsBody?.friction = 0
-//        aiFighter.physicsBody?.affectedByGravity = false
-//        aiFighter
-//            .physicsBody?.isDynamic = false
-//
-//    }
 
+
+
+}
