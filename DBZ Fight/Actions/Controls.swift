@@ -15,7 +15,7 @@ extension GameScene
 {
     func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerButtonInput, index: Int)
     {
-//        if gamepad.buttonA.value == 1.0
+//        buttons
         if (gamepad.buttonA.isPressed)
                {
             print("A is pressed")
@@ -32,7 +32,32 @@ extension GameScene
             {
             print("Y is pressed")
             }
+        if (gamepad.buttonMenu.isPressed)
+        {
+            print("Button Menu")
         }
+        if  (gamepad.buttonOptions!.isPressed)
+        {
+            print("button options")
+        }
+//        dpad
+        if (gamepad.dpad.left.value) >= 0.7
+        {
+            print("left dpad")
+        }
+        if (gamepad.dpad.right.value) >= 0.7
+        {
+            print("right dpad")
+        }
+        if (gamepad.dpad.up.value) >= 0.7
+        {
+            print("up dpad")
+        }
+        if (gamepad.dpad.down.value) >= 0.7
+        {
+            print("down dpad")
+        }
+    }
     
     func controllerInputDetected(gamepad: GCExtendedGamepad, element: GCControllerElement, index: Int)
         {
@@ -54,23 +79,68 @@ extension GameScene
                 {
                 print("Y is pressed")
                 }
-            if (gamepad.leftThumbstick.left.value) == 1
+//            left thumbstick
+            if (gamepad.leftThumbstick.left.value) >= 0.7
             {
                 print("Left")
             }
-            if (gamepad.leftThumbstick.right.value) == 1
+            if (gamepad.leftThumbstick.right.value) >= 0.7
             {
                 print("Right")
             }
-            if (gamepad.leftThumbstick.down.value) == 1
+            if (gamepad.leftThumbstick.down.value) >= 0.7
             {
                 print("Down")
             }
-            if (gamepad.leftThumbstick.up.value) == 1
+            if (gamepad.leftThumbstick.up.value) >= 0.7
             {
                 print("Up")
             }
+            if (gamepad.leftThumbstickButton?.value) == 0.8
+            {
+                print("left stick button")
+
+            }
+//            right thumbstick
+            if (gamepad.rightThumbstick.left.value) >= 0.7
+            {
+                print("Left")
+            }
+            if (gamepad.rightThumbstick.right.value) >= 0.7
+                      {
+                print("Right")
+                      }
+            if (gamepad.rightThumbstick.down.value) >= 0.7
+                      {
+                print("Down")
+                      }
+            if (gamepad.rightThumbstick.up.value) >= 0.7
+                      {
+                print("Up")
+                      }
+            if (gamepad.rightThumbstickButton?.value) == 0.8
+            {
+                print("right stick button")
+            }
             
+//            shoulders
+            if (gamepad.leftShoulder.isPressed)
+            {
+                print("left shoulder")
+            }
+            if (gamepad.leftTrigger.isPressed)
+            {
+                print("left trigger")
+            }
+            if (gamepad.rightShoulder.isPressed)
+            {
+                print("right shoulder")
+            }
+            if (gamepad.rightTrigger.isPressed)
+            {
+                print("right trigger")
+            }
+        
         }
    
 }
