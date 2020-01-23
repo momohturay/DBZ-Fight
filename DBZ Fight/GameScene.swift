@@ -22,6 +22,7 @@ class GameScene: SKScene {
                    addChild(background)
 //            (player as! CharacterNode).setUpStateMachine()
             player = childNode(withName: "Player") as! SKSpriteNode
+            player.name = "player"
 //           rain() 
              spawnSprite()
              ObserveForGameControllers()
@@ -40,6 +41,16 @@ class GameScene: SKScene {
             
              
          }
+    
+    func checkCollisions()
+    {
+        var playerOne: [SKSpriteNode] = []
+        enumerateChildNodes(withName: ("player") {
+            node, _ in
+            let player = childNode(withName: "Player") as! SKSpriteNode
+
+        }, using: <#(SKNode, UnsafeMutablePointer<ObjCBool>) -> Void#>
+    })
     func ObserveForGameControllers ()
         
         // func is called to detect any controllers currently connected to the apple tv
