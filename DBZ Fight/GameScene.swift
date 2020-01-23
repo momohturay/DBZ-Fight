@@ -14,11 +14,13 @@ var player = SKSpriteNode()
 var aiFighter = SKSpriteNode()
 
 class GameScene: SKScene {
-    
+    var background = SKSpriteNode(imageNamed: "Background4")
     var player = SKSpriteNode()
         override func didMove(to view: SKView)
          {
-            (player as! CharacterNode).setUpStateMachine()
+            background.position = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
+                   addChild(background)
+//            (player as! CharacterNode).setUpStateMachine()
             player = childNode(withName: "Player") as! SKSpriteNode
 //           rain() 
              spawnSprite()
