@@ -14,8 +14,12 @@ var player = SKSpriteNode()
 var aiFighter = SKSpriteNode()
 
 class GameScene: SKScene {
+    
+    var player = SKSpriteNode()
         override func didMove(to view: SKView)
          {
+            (player as! CharacterNode).setUpStateMachine()
+            player = childNode(withName: "Player") as! SKSpriteNode
 //           rain() 
              spawnSprite()
              ObserveForGameControllers()
@@ -26,7 +30,7 @@ class GameScene: SKScene {
              let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
              borderBody.friction = 0.0
              self.physicsBody = borderBody
-             physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+            physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
              
              
           
@@ -92,11 +96,53 @@ class GameScene: SKScene {
     func spawnSprite ()
         //spawns Sprite
     {
-        player = SKSpriteNode(color: UIColor.orange, size: CGSize(width: 40, height: 40))
-        
-        player.position = CGPoint(x: 1, y: 2)
     }
+    
+    
+    func moveRight()
+       {
+        player.physicsBody?.applyImpulse(CGVector(dx: 50, dy: 0))
+    }
+       
+       func moveLeft()
+       {
+        player.physicsBody?.applyImpulse(CGVector(dx: -50, dy: 0))
 
+    }
+       
+       func moveUp()
+       {
+        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 100))
 
+    }
+       
+       func moveDown()
+       {
+        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: -20))
+
+    }
+       
+       func weakAttack()
+       {
+        player.physicsBody?.applyImpulse(CGVector(dx: 100, dy: 200))
+    }
+       
+       func strongAttack()
+       {
+        player.physicsBody?.applyImpulse(CGVector(dx: 300, dy: 400))
+
+    }
+       
+       func specialButton()
+       {}
+       
+       func jumpButton()
+       {}
+       
+       func shieldButton()
+       {}
+
+    
+  
 
 }

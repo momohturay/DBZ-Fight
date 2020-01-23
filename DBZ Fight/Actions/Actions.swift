@@ -12,32 +12,32 @@ import SpriteKit
 extension GameScene
     
 {
-    func moveRight()
-    {}
-    
-    func moveLeft()
-    {}
-    
-    func moveUp()
-    {}
-    
-    func moveDown()
-    {}
-    
-    func weakAttack()
-    {}
-    
-    func strongAttack()
-    {}
-    
-    func specialButton()
-    {}
-    
-    func jumpButton()
-    {}
-    
-    func shieldButton()
-    {}
+//    func moveRight()
+//    {}
+//    
+//    func moveLeft()
+//    {}
+//    
+//    func moveUp()
+//    {}
+//    
+//    func moveDown()
+//    {}
+//    
+//    func weakAttack()
+//    {}
+//    
+//    func strongAttack()
+//    {}
+//    
+//    func specialButton()
+//    {}
+//    
+//    func jumpButton()
+//    {}
+//    
+//    func shieldButton()
+//    {}
     
     
 }

@@ -74,6 +74,8 @@ extension GameScene
             if (gamepad.buttonX.isPressed)
                 {
                 print("X is pressed")
+                    weakAttack()
+                    
                 }
             if (gamepad.buttonY.isPressed)
                 {
@@ -83,18 +85,22 @@ extension GameScene
             if (gamepad.leftThumbstick.left.value) >= 0.7
             {
                 print("Left")
+                moveLeft()
             }
             if (gamepad.leftThumbstick.right.value) >= 0.7
             {
                 print("Right")
+                moveRight()
             }
             if (gamepad.leftThumbstick.down.value) >= 0.7
             {
                 print("Down")
+                moveDown()
             }
             if (gamepad.leftThumbstick.up.value) >= 0.7
             {
                 print("Up")
+                moveUp()
             }
             if (gamepad.leftThumbstickButton?.value) == 0.8
             {
